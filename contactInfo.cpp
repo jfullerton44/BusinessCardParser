@@ -15,14 +15,20 @@ ContactInfo::ContactInfo(string tname, string number, string eaddress){
 }
 
 string ContactInfo::getName(){
+  if(name=="")
+    return "Name not found";
   return name;
 }
 
 string ContactInfo::getPhoneNumber(){
+  if(phoneNumber=="")
+    return "Phone Number not found";
   return phoneNumber;
 }
 
 string ContactInfo::getEmailAddress(){
+  if(emailAddress=="")
+    return "Email Address not found";
   return emailAddress;
 }
 

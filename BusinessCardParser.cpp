@@ -47,12 +47,11 @@ ContactInfo getContactInfo(string document){
      //The only characters that are searched for are the characters before the @ sign as to not include the company name
      while(getline(file,line)){
        for(int i=0;i<position-3;i++){
-	 if(line.find(address.substr(i,3))!=string::npos&&!foundName){
+	 if(line.find(address.substr(i,3)) != string::npos && !foundName && line.find("@") == string::npos){
 	   name=line;
 	   //if part of the email address matches the line the we can assume that it is the name
 	   foundName=true;
 	   //Since you dont want it to get overwritten by the email address this loop is stopped after a name is found
-	     
 	   }
        }
      }
